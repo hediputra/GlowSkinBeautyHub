@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Fira+Code:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-mono: "Fira Code", ui-monospace, SFMono-Regular, monospace;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.05);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(190, 150, 130, 0.4);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(190, 150, 130, 0.6);
+}
+
+/* Print-optimized stylesheet for physical/PDF documentation needs */
+@media print {
+  /* Hide non-essential layout blocks altogether */
+  header,
+  footer,
+  nav,
+  .no-print,
+  #quick-action-menu-wrapper,
+  input[type="range"],
+  button,
+  .cursor-pointer,
+  [id^="nav-tab-"] {
+    display: none !important;
+  }
+
+  /* Reset container widths, padding & background colors */
+  body, 
+  html {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 11pt !important;
+    line-height: 1.5 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  main {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Styling for active panels to span 100% without decorative margins */
+  .bg-white {
+    background-color: #ffffff !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .bg-slate-50, 
+  .bg-slate-50\/50, 
+  .bg-slate-55\/30,
+  .bg-slate-100 {
+    background-color: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+  }
+
+  /* Ensure text is high contrast dark gray/black */
+  h1, h2, h3, h4, h5, h6 {
+    color: #020617 !important;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  p, li, span, td, th {
+    color: #334155 !important;
+  }
+
+  /* Ensure correct container borders */
+  .border, 
+  .border-slate-200, 
+  .border-slate-150 {
+    border: 1px solid #cbd5e1 !important;
+  }
+
+  /* Avoid page breaks inside logical visual blocks or graphs */
+  .print-avoid-break,
+  .bg-white > div {
+    display: block;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* Force Recharts graph responsiveness/SVG dimensions during print layout */
+  .recharts-responsive-container {
+    width: 100% !important;
+    height: 320px !important;
+    display: block !important;
+  }
+
+  /* Standard page layout margins */
+  @page {
+    size: portrait;
+    margin: 18mm 15mm 18mm 15mm;
+  }
+}
+
+

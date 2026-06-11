@@ -1,0 +1,6 @@
+{
+  "name": "BeautyHub Blueprint",
+  "description": "Cetak Biru Ekosistem Digital Manajemen & Pemasaran Skincare Keagenan untuk UMKM Kosmetik",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
